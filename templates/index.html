@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>XebiAPI</title>
+</head>
+<body>
+  <div class="sse">
+    <p>This is a test with current time.</p>
+    <script type="text/javascript">
+        var source = new EventSource('/events/');
+        source.onmessage = function(e) {
+            document.body.innerHTML += '<p>' + e.data + '</p>';
+        };
+    </script>
+  </div>
+</body>
+</html>
